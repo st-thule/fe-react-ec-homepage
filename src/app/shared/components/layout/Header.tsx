@@ -1,8 +1,13 @@
+import dropdown from "@assets/icons/dropdown.svg";
+import flag from "@assets/images/flag.png";
+import logo from "@assets/images/logo.png";
+import { NavBar } from "../NavBar";
+
 export const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <div className="header-mobile">
+        {/* <div className="header-mobile">
           <img
             className="toggle-menu"
             src="assets/icons/toogle.svg"
@@ -12,7 +17,7 @@ export const Header = () => {
             <a href="#">
               <img
                 className="logo-image"
-                src="assets/images/logo.png"
+                src={logo}
                 alt="One more friend Thousands more fun!"
               />
             </a>
@@ -22,42 +27,19 @@ export const Header = () => {
             src="assets/icons/search-responsive.svg"
             alt="Search"
           />
-        </div>
+        </div> */}
         <div className="wrapper">
           <div className="header-navigation">
             <h2 className="logo">
               <a href="#">
                 <img
                   className="logo-image"
-                  src="assets/images/logo.png"
+                  src={logo}
                   alt="One more friend Thousands more fun!"
                 />
               </a>
             </h2>
-            <nav className="nav">
-              <ul className="list-menu">
-                <li className="list-item menu-item">
-                  <a className="item-link" href="#">
-                    Home
-                  </a>
-                </li>
-                <li className="list-item menu-item">
-                  <a className="item-link" href="#">
-                    Category
-                  </a>
-                </li>
-                <li className="list-item menu-item">
-                  <a className="item-link" href="#">
-                    About
-                  </a>
-                </li>
-                <li className="list-item menu-item">
-                  <a className="item-link" href="#">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <NavBar />
           </div>
           <div className="header-utility">
             <form className="form-search">
@@ -71,11 +53,11 @@ export const Header = () => {
               Join the community
             </a>
             <div className="utitlity-currency">
-              <img className="currency-flag" src="assets/images/flag.png" />
+              <img className="currency-flag" src={flag} />
               <span className="currency-text">VND</span>
               <img
                 className="currency-dropdown"
-                src="assets/icons/dropdown.svg"
+                src={dropdown}
                 alt="dropdown"
               />
             </div>
