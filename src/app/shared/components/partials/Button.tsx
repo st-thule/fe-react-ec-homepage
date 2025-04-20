@@ -17,12 +17,12 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <a className={`btn ${className}`} onClick={onClick}>
+      <p>{label}</p>
       {icon && (
         <span className="btn-icon">
           <img src={icon} alt="button icon" />
         </span>
       )}
-      <p>{label}</p>
     </a>
   );
 };
