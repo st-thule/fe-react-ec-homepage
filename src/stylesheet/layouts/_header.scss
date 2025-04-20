@@ -1,0 +1,63 @@
+@use "../base/" as *;
+
+.header {
+  background-color: transparent;
+  padding: 30px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  .wrapper {
+    @include flex($direction: row, $gap: 36px, $align: center);
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+  }
+  &-navigation {
+    @include flex($direction: row, $justify: space-between, $align: center);
+  }
+  &-utility {
+    @include flex($direction: row, $align: center, $gap: 14px);
+    flex: 1;
+  }
+  &-mobile {
+    @include flex($justify: space-between, $align: center);
+  }
+}
+
+.header-mobile {
+  display: none;
+  @media screen and (max-width: $md) {
+    display: flex;
+  }
+}
+.nav {
+  padding-left: 48px;
+}
+
+.header .list {
+  &-nav {
+    @include flex($gap: 48px);
+  }
+}
+
+.form {
+  &-search {
+    flex: 1;
+    input {
+      background: url(@assets/icons/search.svg) no-repeat scroll 7px 10px;
+      padding-left: 32px;
+    }
+  }
+}
+
+.utitlity-currency {
+  @include flex($align: center);
+}
+.currency {
+  &-flag {
+    padding-right: 6px;
+  }
+  &-text {
+    padding-right: 4px;
+  }
+}

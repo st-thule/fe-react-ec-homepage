@@ -1,0 +1,11 @@
+@use "../base/" as *;
+nav {
+  .menu-item {
+    font-size: $size-medium;
+    line-height: 24px;
+    font-weight: $font-bold;
+    a {
+      color: $color-primary;
+    }
+  }
+}
