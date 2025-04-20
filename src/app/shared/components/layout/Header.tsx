@@ -2,6 +2,7 @@ import dropdown from "@assets/icons/dropdown.svg";
 import flag from "@assets/images/flag.png";
 import logo from "@assets/images/logo.png";
 import { NavBar } from "../NavBar";
+import { Input } from "../Input";
 
 export const Header = () => {
   return (
@@ -43,8 +44,8 @@ export const Header = () => {
           </div>
           <div className="header-utility">
             <form className="form-search">
-              <input
-                className="utility-search"
+              <Input
+                className="utitlity-search"
                 type="search"
                 placeholder="Search something here!"
               />
