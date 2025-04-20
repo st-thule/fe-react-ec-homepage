@@ -2,6 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   className?: string;
+  type?: "button" | "submit";
   onClick?: () => void;
   label: string;
   icon?: string;
@@ -9,6 +10,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({
   className = "",
+  type = "button",
   onClick,
   label,
   icon,

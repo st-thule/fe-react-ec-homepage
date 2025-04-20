@@ -1,6 +1,6 @@
-import { NavItems } from "@shared/constants/data";
-
 import React from "react";
+
+import { NavItems } from "@shared/constants/data";
 
 interface NavBarProps {
   ulClassName?: string;

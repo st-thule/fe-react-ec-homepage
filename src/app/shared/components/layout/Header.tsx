@@ -1,14 +1,12 @@
-import dropdown from "@assets/icons/dropdown.svg";
-import searchResponsive from "@assets/icons/search-responsive.svg";
-import toogle from "@assets/icons/toogle.svg";
-import flag from "@assets/images/flag.png";
-import logo from "@assets/images/logo.png";
+import React from "react";
 
 import Button from "@shared/components/partials/Button";
 import { Input } from "@shared/components/partials/Input";
 import { NavBar } from "@shared/components/partials/NavBar";
 
-import React from "react";
+import dropdown from "@assets/icons/dropdown.svg";
+import searchResponsive from "@assets/icons/search-responsive.svg";
+import toogle from "@assets/icons/toogle.svg";
 
 export const Header = () => {
   return (
@@ -20,7 +18,7 @@ export const Header = () => {
             <a href="#">
               <img
                 className="logo-image"
-                src={logo}
+                src="/assets/images-logo.png"
                 alt="One more friend Thousands more fun!"
               />
             </a>
@@ -33,7 +31,7 @@ export const Header = () => {
               <a href="#">
                 <img
                   className="logo-image"
-                  src={logo}
+                  src="/assets/images/logo.png"
                   alt="One more friend Thousands more fun!"
                 />
               </a>
@@ -45,15 +43,16 @@ export const Header = () => {
               <Input
                 className="utitlity-search"
                 type="search"
-                placeholder="Search something here!"
+                placeHolder="Search something here!"
               />
             </form>
             <Button
               label="Join the community"
               className="btn-primary btn-bold btn-xl"
+              type="button"
             />
             <div className="utitlity-currency">
-              <img className="currency-flag" src={flag} />
+              <img className="currency-flag" src="/assets/images/flag.png" />
               <span className="currency-text">VND</span>
               <img
                 className="currency-dropdown"
