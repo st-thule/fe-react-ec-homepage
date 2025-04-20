@@ -48,10 +48,7 @@ export const Header = () => {
             </form>
             <Button
               label="Join the community"
-              type="primary"
-              size="xl"
-              style="bold"
-              isFlex={false}
+              className="btn-primary btn-bold btn-xl"
             />
             <div className="utitlity-currency">
               <img className="currency-flag" src={flag} />
