@@ -26,3 +26,4 @@ export const NavItems: NavItemProps[] = [
     href: "/contact",
   },
 ];
+
