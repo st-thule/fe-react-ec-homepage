@@ -1,19 +1,19 @@
 import dropdown from "@assets/icons/dropdown.svg";
 import flag from "@assets/images/flag.png";
 import logo from "@assets/images/logo.png";
+import toogle from "@assets/icons/toogle.svg";
+import searchResponsive from "@assets/icons/search-responsive.svg";
+
 import { NavBar } from "../NavBar";
 import { Input } from "../Input";
+import Button from "../Button";
 
 export const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        {/* <div className="header-mobile">
-          <img
-            className="toggle-menu"
-            src="assets/icons/toogle.svg"
-            alt="Menu"
-          />
+        <div className="header-mobile">
+          <img className="toggle-menu" src={toogle} alt="Menu" />
           <h2 className="logo">
             <a href="#">
               <img
@@ -23,12 +23,8 @@ export const Header = () => {
               />
             </a>
           </h2>
-          <img
-            className="search-toggle"
-            src="assets/icons/search-responsive.svg"
-            alt="Search"
-          />
-        </div> */}
+          <img className="search-toggle" src={searchResponsive} alt="Search" />
+        </div>
         <div className="wrapper">
           <div className="header-navigation">
             <h2 className="logo">
@@ -50,9 +46,13 @@ export const Header = () => {
                 placeholder="Search something here!"
               />
             </form>
-            <a className="btn btn-primary btn-bold btn-xl">
-              Join the community
-            </a>
+            <Button
+              label="Join the community"
+              type="primary"
+              size="xl"
+              style="bold"
+              isFlex={false}
+            />
             <div className="utitlity-currency">
               <img className="currency-flag" src={flag} />
               <span className="currency-text">VND</span>
