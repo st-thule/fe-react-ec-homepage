@@ -3,6 +3,7 @@ import React from "react";
 import Button from "@shared/components/partials/Button";
 import { Input } from "@shared/components/partials/Input";
 import { NavBar } from "@shared/components/partials/NavBar";
+import { listFooterLegal, listIconSocial } from "@shared/constants/data";
 
 export const Footer = () => {
   return (
@@ -25,42 +26,17 @@ export const Footer = () => {
             <NavBar ulClassName="list-xl" />
             <div className="footer-social">
               <ul className="list-social">
-                <li className="list-item">
-                  <a className="item-link" href="#">
-                    <img
-                      className="item-img"
-                      src="assets/images/footer/facebook.png"
-                      alt="Facebook"
-                    />
-                  </a>
-                </li>
-                <li className="list-item">
-                  <a className="item-link" href="#">
-                    <img
-                      className="item-img"
-                      src="assets/images/footer/twitter.png"
-                      alt="Twitter"
-                    />
-                  </a>
-                </li>
-                <li className="list-item">
-                  <a className="item-link" href="#">
-                    <img
-                      className="item-img"
-                      src="assets/images/footer/instagram.png"
-                      alt="Instagram"
-                    />
-                  </a>
-                </li>
-                <li className="list-item">
-                  <a className="item-link" href="#">
-                    <img
-                      className="item-img"
-                      src="assets/images/footer/youtube.png"
-                      alt="Youtube"
-                    />
-                  </a>
-                </li>
+                {listIconSocial.map((item) => (
+                  <li className="list-item" key={item.id}>
+                    <a className="item-link" href="#">
+                      <img
+                        className="item-img"
+                        src={item.image}
+                        alt={item.alt}
+                      />
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -75,16 +51,13 @@ export const Footer = () => {
             </div>
             <div className="footer-legal">
               <ul className="list-legal">
-                <li className="list-item">
-                  <a className="item-link" href="#">
-                    Terms of Service
-                  </a>
-                </li>
-                <li className="list-item">
-                  <a className="item-link" href="#">
-                    Privacy Policy
-                  </a>
-                </li>
+                {listFooterLegal.map((item) => (
+                  <li className="list-item" key={item.id}>
+                    <a className="item-link" href="#">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
