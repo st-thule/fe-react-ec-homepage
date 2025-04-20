@@ -1,0 +1,13 @@
+@use "../base/" as *;
+.list {
+  &-menu {
+    @include flex($direction: row, $align: center);
+    gap: 48px;
+  }
+  &-xl {
+    gap: 60px;
+    @media screen and (max-width: $sm) {
+      gap: 40px;
+    }
+  }
+}

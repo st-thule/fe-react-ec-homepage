@@ -1,0 +1,51 @@
+@use "../base/" as *;
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 57px;
+  border: 1.5px solid $color-primary;
+  font-weight: $font-medium;
+  font-size: $size-medium;
+  line-height: 24px;
+  cursor: pointer;
+  &-secondary {
+    color: $color-primary;
+    &:hover {
+      background-color: $color-primary;
+      color: $color-a-white;
+    }
+  }
+  &-primary {
+    background-color: $color-primary;
+    color: $color-a-white;
+    &:hover {
+      background-color: $color-a-white;
+      color: $color-primary;
+    }
+  }
+  &-border {
+    border-radius: 8px;
+  }
+  &-2xl {
+    padding: 12px 34px;
+  }
+  &-xl {
+    padding: 12px 28px;
+  }
+  &-sm {
+    padding: 10px 26px;
+  }
+  &-bold {
+    font-weight: $font-bold;
+  }
+  &-font-small {
+    font-size: $size-small;
+  }
+  &-flex {
+    @include flex($direction: row, $align: center);
+    width: fit-content;
+    img {
+      padding-left: 8px;
+    }
+  }
+}

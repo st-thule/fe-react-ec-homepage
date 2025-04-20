@@ -5,6 +5,8 @@ import "../stylesheet/styles.scss";
 
 import { Page } from "./pages/Page";
 
+import React from "react";
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Page />
