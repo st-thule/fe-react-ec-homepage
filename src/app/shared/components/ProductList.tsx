@@ -1,5 +1,5 @@
 import { Product } from "../models/Product";
-import { CardItem } from "./CardItem";
+import { CardItem } from "./ProductCard";
 
 interface ICartList {
   products: Product[];

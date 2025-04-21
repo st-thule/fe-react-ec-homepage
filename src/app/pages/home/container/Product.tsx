@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Product } from "../../../shared/models/Product";
-import { CardList } from "../../../shared/components/CardList";
+import { CardList } from "../../../shared/components/ProductList";
 import Button from "../../../shared/components/Button";
 import data from "../../../../../public/data/product.json";
 
