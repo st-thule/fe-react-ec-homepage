@@ -66,6 +66,10 @@
     }
   }
 
+  &-action {
+    @include flex();
+  }
+
   &-footer {
     width: 100%;
     .btn-flex {

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "MO231",
+    "image": "assets/images/pets.png",
+    "breed": "Pomeranian White",
+    "gender": "Male",
+    "age": 2,
+    "price": 6900000
+  },
+  {
+    "id": "MO502",
+    "image": "assets/images/pets.png",
+    "breed": "Poodle Tiny Yellow",
+    "gender": "Female",
+    "age": 2,
+    "price": 3900000
+  },
+  {
+    "id": "MO102",
+    "image": "assets/images/pets.png",
+    "breed": "Poodle Tiny Sepia",
+    "gender": "Male",
+    "age": 2,
+    "price": 4000000
+  },
+  {
+    "id": "MO513",
+    "image": "assets/images/pets.png",
+    "breed": "Alaskan Malamute Grey",
+    "gender": "Male",
+    "age": 2,
+    "price": 8900000
+  },
+  {
+    "id": "MO232",
+    "image": "assets/images/pets.png",
+    "breed": "Pembroke Corgi Cream",
+    "gender": "Male",
+    "age": 2,
+    "price": 7900000
+  },
+  {
+    "id": "MO501",
+    "image": "assets/images/pets.png",
+    "breed": "Pembroke Corgi Tricolor",
+    "gender": "Female",
+    "age": 2,
+    "price": 9000000
+  },
+  {
+    "id": "MO233",
+    "image": "assets/images/pets.png",
+    "breed": "Pomeranian White",
+    "gender": "Female",
+    "age": 2,
+    "price": 6500000
+  },
+  {
+    "id": "MO512",
+    "image": "assets/images/pets.png",
+    "breed": "Poodle Tiny Dairy Cow",
+    "gender": "Female",
+    "age": "02 months",
+    "price": 5000000
+  }
+]

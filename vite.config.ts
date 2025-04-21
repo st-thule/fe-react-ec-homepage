@@ -14,7 +14,7 @@ export default defineConfig({
        * After writing entry here, you will not need to add script tags in `index.html`, the original tags need to be deleted
        * @default /app/App.tsx
        */
-      entry: "/app/App.tsx",
+      entry: "/app/main.tsx",
       /**
        * If you want to store `index.html` in the specified folder, you can modify it, otherwise no configuration is required
        * @default index.html

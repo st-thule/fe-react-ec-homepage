@@ -1,12 +1,10 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React from "react";
+import { useRoutes } from "react-router-dom";
+import appRoutes from "./app.routes";
 
-import "../stylesheet/styles.scss";
+const App = () => {
+  const routes = useRoutes(appRoutes);
+  return routes;
+};
 
-import { Page } from "./pages/Page";
-
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <Page />
-  </StrictMode>
-);
+export default App;
