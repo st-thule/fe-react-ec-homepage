@@ -18,7 +18,7 @@ export const Header = () => {
             <a href="#">
               <img
                 className="logo-image"
-                src="/assets/images-logo.png"
+                src="/assets/images/logo.png"
                 alt="One more friend Thousands more fun!"
               />
             </a>
