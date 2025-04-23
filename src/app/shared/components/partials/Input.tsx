@@ -38,7 +38,7 @@ export const Input: React.FC<InputProps> = ({
     }
   };
   return (
-    <div>
+    <div className="input-wrapper">
       {label && <label>{label}</label>}
       <input
         id={name}
