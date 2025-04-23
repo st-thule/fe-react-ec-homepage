@@ -23,7 +23,11 @@ export const ProductSection = () => {
             <h2 className="section-title">Take A Look At Some Of Our Pets</h2>
           </div>
           <div className="section-action">
-            <Button className="btn-secondary" label="View more" />
+            <Button
+              className="btn-secondary btn-flex btn-sm btn-font-small"
+              label="View more"
+              icon="./assets/icons/arrow.svg"
+            />
           </div>
         </div>
         <div className="section-body">
