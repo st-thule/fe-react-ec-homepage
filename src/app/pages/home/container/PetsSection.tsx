@@ -2,7 +2,12 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 
 import { Pet } from '@shared/models/Pet';
-import { CardTypeKey } from '@shared/utils/storage';
+import {
+  CardTypeKey,
+  getDataFromLocalStorage,
+  setDataFromLocalStorage,
+  StorageKeys,
+} from '@shared/utils/storage';
 import Button from '@shared/components/partials/Button';
 import { PetsList } from '@shared/constants/data';
 import { CardList } from '@shared/components/partials/Card/CardList';
@@ -13,6 +18,17 @@ export const PetsSection = () => {
   useEffect(() => {
     setPets(PetsList);
   }, []);
+
+  const handleAddToCart = (id: string | number) => {
+    const selectedItem = pets.find((pet) => pet.id === id);
+
+    const currentCartData = getDataFromLocalStorage(StorageKeys.PETS, []);
+    const existData = currentCartData.find((pet) => pet.id === id);
+    if (!existData) {
+      const updatedCart = [...currentCartData, selectedItem];
+      setDataFromLocalStorage(StorageKeys.PETS, updatedCart);
+    }
+  };
 
   return (
     <section className="section section-products section-pets">
@@ -35,6 +51,7 @@ export const PetsSection = () => {
             data={pets}
             type={CardTypeKey.PET}
             className="col-6 col-sm-6 col-md-3"
+            onSubmit={handleAddToCart}
           />
         </div>
       </div>

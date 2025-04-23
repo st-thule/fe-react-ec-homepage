@@ -34,8 +34,9 @@ export const ProductSection = () => {
           <CardList
             data={products}
             type={CardTypeKey.PRODUCT}
-            className="col-6 col-sm-6 col-md-3"
-          />
+            className="col-6 col-sm-6 col-md-3" onSubmit={function (id: number | string): void {
+              throw new Error('Function not implemented.');
+            } }          />
         </div>
       </div>
     </section>

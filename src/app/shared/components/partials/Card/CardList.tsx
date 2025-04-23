@@ -10,12 +10,23 @@ export interface ICardList {
   data: Pet[] | Product[] | Blog[];
   type: CardTypeKey;
   className: string;
+  onSubmit: (id: number | string) => void;
 }
-export const CardList: React.FC<ICardList> = ({ data, type, className }) => {
+export const CardList: React.FC<ICardList> = ({
+  data,
+  type,
+  className,
+  onSubmit,
+}) => {
   return (
     <ul className="list-products row">
       {data.map((item) => (
-        <CardItem data={item} cardType={type} className={className} />
+        <CardItem
+          data={item}
+          cardType={type}
+          className={className}
+          onSubmit={onSubmit}
+        />
       ))}
     </ul>
   );

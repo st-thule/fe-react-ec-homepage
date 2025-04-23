@@ -10,12 +10,14 @@ interface CardProps {
   data: Pet | Product | Blog;
   cardType: CardTypeKey;
   className: string;
+  onSubmit: (id: number | string) => void;
 }
 
 export const CardItem: React.FC<CardProps> = ({
   data,
   cardType,
   className,
+  onSubmit,
 }) => {
   return (
     <li className={`list-item ${className}`} key={data.id}>
@@ -44,7 +46,11 @@ export const CardItem: React.FC<CardProps> = ({
                 </span>
               </p>
               <span className="card-price">{(data as Pet).price} VND</span>
-              <Button className="btn-add-cart" label="Add to cart" />
+              <Button
+                className="btn-add-cart"
+                label="Add to cart"
+                onClick={() => onSubmit(data.id)}
+              />
             </>
           ) : cardType === 'products' ? (
             <>
