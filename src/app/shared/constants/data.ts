@@ -33,7 +33,7 @@ export const NavItems: NavItemProps[] = [
 export const PetsList: Pet[] = [
   {
     id: 'MO231',
-    image: '../../assets/images/pets.png',
+    image: '../../assets/images/pets/white-dog.png',
     breed: 'Pomeranian White',
     gender: 'Male',
     age: 2,
@@ -41,7 +41,7 @@ export const PetsList: Pet[] = [
   },
   {
     id: 'MO502',
-    image: '../../assets/images/pets.png',
+    image: '../../assets/images/pets/tiny.png',
     breed: 'Poodle Tiny Yellow',
     gender: 'Female',
     age: 2,
@@ -49,7 +49,7 @@ export const PetsList: Pet[] = [
   },
   {
     id: 'MO102',
-    image: '../../assets/images/pets.png',
+    image: '../../assets/images/pets/poodle.png',
     breed: 'Poodle Tiny Sepia',
     gender: 'Male',
     age: 2,
@@ -57,7 +57,7 @@ export const PetsList: Pet[] = [
   },
   {
     id: 'MO513',
-    image: '../../assets/images/pets.png',
+    image: '../../assets/images/pets/alaskan.png',
     breed: 'Alaskan Malamute Grey',
     gender: 'Male',
     age: 2,
@@ -65,7 +65,7 @@ export const PetsList: Pet[] = [
   },
   {
     id: 'MO232',
-    image: '../../assets/images/pets.png',
+    image: '../../assets/images/pets/pembroke.png',
     breed: 'Pembroke Corgi Cream',
     gender: 'Male',
     age: 2,
@@ -73,7 +73,7 @@ export const PetsList: Pet[] = [
   },
   {
     id: 'MO501',
-    image: '../../assets/images/pets.png',
+    image: '../../assets/images/pets/corgi.png',
     breed: 'Pembroke Corgi Tricolor',
     gender: 'Female',
     age: 2,
@@ -81,7 +81,7 @@ export const PetsList: Pet[] = [
   },
   {
     id: 'MO233',
-    image: '../../assets/images/pets.png',
+    image: '../../assets/images/pets/white-dog.png',
     breed: 'Pomeranian White',
     gender: 'Female',
     age: 2,
@@ -89,7 +89,7 @@ export const PetsList: Pet[] = [
   },
   {
     id: 'MO512',
-    image: '../../assets/images/pets.png',
+    image: '../../assets/images/pets/dairy.png',
     breed: 'Poodle Tiny Dairy Cow',
     gender: 'Female',
     age: 2,

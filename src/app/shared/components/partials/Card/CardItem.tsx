@@ -28,7 +28,7 @@ export const CardItem: React.FC<CardProps> = ({
           {cardType === 'pets' ? (
             <>
               <h3 className="card-title">
-                {data.id} - {(data as Pet).id}
+                {data.id} - {(data as Pet).breed}
               </h3>
               <p className="card-detail detail">
                 <span className="detail-group">
