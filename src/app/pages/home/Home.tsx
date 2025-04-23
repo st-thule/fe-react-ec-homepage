@@ -1,17 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import { HeroBanner } from "@app/pages/home/container/HeroBanner";
-import { FriendBanner } from "@app/pages/home/container/FriendBanner";
-import { Sellers } from "@app/pages/home/container/Sellers";
-import { Adoption } from "@app/pages/home/container/Adoption";
+import { HeroBanner } from '@app/pages/home/container/HeroBanner';
+import { FriendBanner } from '@app/pages/home/container/FriendBanner';
+import { Sellers } from '@app/pages/home/container/Sellers';
+import { Adoption } from '@app/pages/home/container/Adoption';
+import { PetsSection } from '@app/pages/home/container/PetsSection';
+import { ProductSection } from '@app/pages/home/container/ProductsSection';
+import { KnowledgeSection } from './container/KnowledgeSection';
 
 export const Home = () => {
   return (
     <>
       <HeroBanner />
+      <PetsSection />
       <FriendBanner />
-      <Sellers />
+      <ProductSection />
       <Adoption />
+      <Sellers />
+      <KnowledgeSection />
     </>
   );
 };

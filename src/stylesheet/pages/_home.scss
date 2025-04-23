@@ -205,3 +205,109 @@
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+.section {
+  &-sellers {
+    padding: 40px 0 40px;
+    .list-products {
+      @include flex($justify: space-between, $gap: 20px);
+    }
+    .section {
+      &-title {
+        font-size: $size-medium;
+        line-height: 31px;
+        color: $color-a-black;
+        font-weight: $font-medium;
+      }
+      &-subtitle {
+        font-size: $size-large;
+        line-height: 36px;
+        color: $color-primary;
+        padding-left: 8px;
+        font-weight: $font-bold;
+      }
+    }
+  }
+}
+
+.section {
+  &-products {
+    padding: 60px 0;
+    @media screen and (max-width: $md) {
+      padding: 30px 0 40px;
+    }
+  }
+  &-header {
+    @include flex($direction: row, $justify: space-between, $align: center);
+    margin-bottom: 28px;
+    @media screen and (max-width: $md) {
+      margin-bottom: 20px;
+    }
+  }
+  &-body {
+    @media screen and (max-width: $md) {
+      margin-bottom: 16px;
+    }
+  }
+  &-text {
+    h2 {
+      font-size: $size-large;
+      font-weight: $font-bold;
+      line-height: 36px;
+      color: $color-primary;
+      @media screen and (max-width: $sm) {
+        font-size: $size-regular;
+        line-height: 32px;
+      }
+    }
+    p {
+      font-size: $size-medium;
+      font-weight: $font-medium;
+      line-height: 24px;
+      color: $color-a-black;
+      @media screen and (max-width: $sm) {
+        font-size: $size-small;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &-action {
+    @include flex();
+  }
+
+  &-footer {
+    width: 100%;
+    .btn-flex {
+      width: auto;
+      text-align: center;
+      justify-content: center;
+      font-size: $size-medium;
+      line-height: 24px;
+    }
+  }
+  &-knowledge {
+    .section-img {
+      aspect-ratio: 3/2;
+    }
+  }
+}
+
+.section-knowledge {
+  .section-body {
+    .list-products {
+      .list-item {
+        .card {
+          .card-img {
+            img {
+              aspect-ratio: 3/2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+>>>>>>> task/build-section-product-and-blog
