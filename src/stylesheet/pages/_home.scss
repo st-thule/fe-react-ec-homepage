@@ -1,4 +1,4 @@
-@use "../base/" as *;
+@use '../base/' as *;
 .section-banner {
   .wrapper {
     position: relative;
@@ -205,8 +205,6 @@
     }
   }
 }
-<<<<<<< HEAD
-=======
 
 .section {
   &-sellers {
@@ -310,4 +308,3 @@
     }
   }
 }
->>>>>>> task/build-section-product-and-blog
