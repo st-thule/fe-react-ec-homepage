@@ -195,68 +195,69 @@ export const BlogList = [
 export const listIconSocial = [
   {
     id: 1,
-    alt: "Facebook",
-    image: "assets/images/footer/facebook.png",
+    alt: 'Facebook',
+    image: 'assets/images/footer/facebook.png',
   },
   {
     id: 2,
-    alt: "Twitter",
-    image: "assets/images/footer/twitter.png",
+    alt: 'Twitter',
+    image: 'assets/images/footer/twitter.png',
   },
   {
     id: 3,
-    alt: "Instagram",
-    image: "assets/images/footer/instagram.png",
+    alt: 'Instagram',
+    image: 'assets/images/footer/instagram.png',
   },
   {
     id: 4,
-    alt: "Youtube",
-    image: "assets/images/footer/youtube.png",
+    alt: 'Youtube',
+    image: 'assets/images/footer/youtube.png',
   },
 ];
-
 export const listFooterLegal = [
   {
     id: 1,
-    label: "Terms of Service",
+    label: 'Terms of Service',
   },
   {
     id: 2,
-    label: "Privacy Policy",
+    label: 'Privacy Policy',
+  },
+];
 export const sellerItem = [
   {
     id: 1,
-    alt: "Sheba",
-    image: "assets/images/sellers/sheba.png",
+    alt: 'Sheba',
+    image: 'assets/images/sellers/sheba.png',
   },
   {
     id: 2,
-    alt: "Whiskas",
-    image: "assets/images/sellers/whiskas.png",
+    alt: 'Whiskas',
+    image: 'assets/images/sellers/whiskas.png',
   },
   {
     id: 3,
-    alt: "Bakers",
-    image: "assets/images/sellers/bakers.png",
+    alt: 'Bakers',
+    image: 'assets/images/sellers/bakers.png',
   },
   {
     id: 4,
-    alt: "Felix",
-    image: "assets/images/sellers/felix.png",
+    alt: 'Felix',
+    image: 'assets/images/sellers/felix.png',
   },
   {
     id: 5,
-    alt: "Good Boy",
-    image: "assets/images/sellers/goodboy.png",
+    alt: 'Good Boy',
+    image: 'assets/images/sellers/goodboy.png',
   },
   {
     id: 6,
-    alt: "Butchers",
-    image: "assets/images/sellers/butchers.png",
+    alt: 'Butchers',
+    image: 'assets/images/sellers/butchers.png',
   },
   {
     id: 1,
-    alt: "Pedigree",
-    image: "assets/images/sellers/pedigree.png",
+    alt: 'Pedigree',
+    image: 'assets/images/sellers/pedigree.png',
   },
 ];
