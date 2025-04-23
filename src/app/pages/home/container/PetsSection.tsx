@@ -27,6 +27,7 @@ export const PetsSection = () => {
     if (!existData) {
       const updatedCart = [...currentCartData, selectedItem];
       setDataFromLocalStorage(StorageKeys.PETS, updatedCart);
+    } else {
     }
   };
 

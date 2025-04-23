@@ -99,7 +99,7 @@ export const PetsList: Pet[] = [
 
 export const ProductList: Product[] = [
   {
-    id: '1',
+    id: 'P121',
     name: 'Reflex Plus Adult Cat Food Salmon',
     type: 'Dog Food',
     size: '385g',
@@ -107,7 +107,7 @@ export const ProductList: Product[] = [
     image: '../../assets/images/product.png',
   },
   {
-    id: '2',
+    id: 'P122',
     name: 'Reflex Plus Adult Cat Food Salmon',
     type: 'Cat Food',
     size: '1.5kg',
@@ -115,7 +115,7 @@ export const ProductList: Product[] = [
     image: '../../assets/images/product.png',
   },
   {
-    id: '3',
+    id: 'P123',
     name: 'Cat scratching ball toy kitten sisal rope ball',
     type: 'Toy',
     size: '',
@@ -123,7 +123,7 @@ export const ProductList: Product[] = [
     image: '../../assets/images/product.png',
   },
   {
-    id: '4',
+    id: 'P124',
     name: 'Cute Pet Cat Warm Nest',
     type: 'Toy',
     size: '',
@@ -131,7 +131,7 @@ export const ProductList: Product[] = [
     image: '../../assets/images/product.png',
   },
   {
-    id: '5',
+    id: 'P125',
     name: 'NaturVet Dogs – Omega-Gold Plus Salmon Oil',
     type: 'Dog Food',
     size: '385g',
@@ -139,7 +139,7 @@ export const ProductList: Product[] = [
     image: '../../assets/images/product.png',
   },
   {
-    id: '6',
+    id: 'P126',
     name: 'Costumes Fashion Pet Cloth Cowboy Rider',
     type: 'Costume',
     size: '1.5kg',
@@ -147,7 +147,7 @@ export const ProductList: Product[] = [
     image: '../../assets/images/product.png',
   },
   {
-    id: '7',
+    id: 'P127',
     name: 'Costumes Chicken Drumstick Headband',
     type: 'Costume',
     size: '',
@@ -155,7 +155,7 @@ export const ProductList: Product[] = [
     image: '../../assets/images/product.png',
   },
   {
-    id: '8',
+    id: 'P128',
     name: 'Plush Pet Toy',
     type: 'Toy',
     size: '',
@@ -166,7 +166,7 @@ export const ProductList: Product[] = [
 
 export const BlogList = [
   {
-    id: 1,
+    id: 'K1',
     title: 'What is a Pomeranian?',
     category: 'Pet knowledge',
     description:
@@ -174,7 +174,7 @@ export const BlogList = [
     image: '../../assets/images/dogrun.png',
   },
   {
-    id: 2,
+    id: 'K2',
     title: 'Dog Diet You Need To Know',
     category: 'Pet knowledge',
     description:
@@ -182,7 +182,7 @@ export const BlogList = [
     image: '../../assets/images/dogrun.png',
   },
   {
-    id: 3,
+    id: 'K3',
     title:
       'Why Dogs Bite and Destroy Furniture and How to Prevent It Effectively',
     category: 'Pet knowledge',
