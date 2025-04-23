@@ -1,8 +1,8 @@
 export interface Product {
-  id?: string | "";
-  image?: string | "";
-  breed?: string | "";
-  gender?: string | "";
-  age?: number | 1;
-  price?: number | 1;
+  id: string;
+  image: string;
+  name: string;
+  type: string;
+  size: string;
+  price: number;
 }

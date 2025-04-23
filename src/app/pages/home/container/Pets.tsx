@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import Button from '../../../shared/components/Button';
-import { Product } from '../../../shared/models/Product';
-import { CardType, ProductList } from '../../../shared/constants/Nav/nav';
 import { CardList } from '../../../shared/components/PetsList';
+import { CardType, PetsList } from '../../../shared/constants/Nav/nav';
+import { Pet } from '../../../shared/models/Pets';
 
-export const ProductSection = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+export const PetsSection = () => {
+  const [pets, setPets] = useState<Pet[]>([]);
 
   useEffect(() => {
-    setProducts(ProductList);
+    setPets(PetsList);
   }, []);
 
   return (
@@ -24,7 +24,7 @@ export const ProductSection = () => {
           </div>
         </div>
         <div className="section-body">
-          <CardList data={products} type={CardType.PRODUCTS} />
+          <CardList data={pets} type={CardType.PETS} />
         </div>
       </div>
     </section>
