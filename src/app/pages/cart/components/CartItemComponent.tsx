@@ -1,21 +1,19 @@
 import deleteIcon from '@assets/icons/delete.svg';
 import Button from '@shared/components/partials/Button';
 import { Input } from '@shared/components/partials/Input';
+import { useCart } from '@shared/contexts/CartContext';
 import { CartItem } from '@shared/models/CartItem';
 import React, { useRef } from 'react';
 
 interface ICartItemProps {
   productItem: CartItem;
-  onChangeQuantity: (petId: string, quantity: number) => void;
-  onDelete: (petId: string) => void;
 }
 
 export const CartItemComponent: React.FC<ICartItemProps> = ({
   productItem,
-  onChangeQuantity,
-  onDelete,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const { updateQuantity, deleteItem } = useCart();
 
   const handleChangeQuantity = () => {
     const value = inputRef.current?.value || '';
@@ -23,9 +21,9 @@ export const CartItemComponent: React.FC<ICartItemProps> = ({
 
     if (!isNaN(quantity)) {
       if (quantity < 1) {
-        onDelete(productItem.pet.id);
+        deleteItem(productItem.pet.id);
       } else {
-        onChangeQuantity(productItem.pet.id, quantity);
+        updateQuantity(productItem.pet.id, quantity);
       }
     }
   };
@@ -56,7 +54,7 @@ export const CartItemComponent: React.FC<ICartItemProps> = ({
         <Button
           icon={deleteIcon}
           className="btn btn-icon"
-          onClick={() => onDelete(productItem.pet.id)}
+          onClick={() => deleteItem(productItem.pet.id)}
         />
       </td>
     </tr>

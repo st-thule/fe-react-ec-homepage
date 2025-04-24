@@ -1,14 +1,11 @@
 import React from 'react';
 
 import Button from '@shared/components/partials/Button';
-interface ICartSummaryProps {
-  totalQuantity: number | 0;
-  totalPrice: number | 0;
-}
-export const CartSummary: React.FC<ICartSummaryProps> = ({
-  totalPrice,
-  totalQuantity,
-}) => {
+import { useCart } from '@shared/contexts/CartContext';
+import { StatusKeys } from '@shared/utils/storage';
+
+export const CartSummary: React.FC = () => {
+  const { totalPrice, totalQuantity, cartStatus } = useCart();
   return (
     <div className="cart-summary">
       <h2 className="cart-title">Cart Totals</h2>
@@ -23,7 +20,7 @@ export const CartSummary: React.FC<ICartSummaryProps> = ({
         </div>
       </div>
       <div className="cart-action">
-        <Button label={'Checkout'} className="" />
+        <Button label={'Checkout'} className="btn btn-secondary" />
       </div>
     </div>
   );

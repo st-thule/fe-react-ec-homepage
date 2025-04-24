@@ -1,17 +1,22 @@
 import React from 'react';
-import { CartItem } from '@shared/models/CartItem';
 import { CartItemComponent } from './CartItemComponent';
+import { useCart } from '@shared/contexts/CartContext';
+import { StatusKeys } from '@shared/utils/storage';
 
-interface ICartListProps {
-  cartList: CartItem[];
-  onChangeQuantity: (petId: string, quantity: number) => void;
-  onDelete: (petId: string) => void;
-}
-export const CartList: React.FC<ICartListProps> = ({
-  cartList,
-  onChangeQuantity,
-  onDelete,
-}) => {
+export const CartList: React.FC = () => {
+  const { cartItems, cartStatus } = useCart();
+
+  if (cartStatus.status === StatusKeys.LOADING) {
+    return <p>Loading...</p>;
+  }
+
+  if (cartStatus.status === StatusKeys.ERROR) {
+    return <p>{cartStatus.message}</p>;
+  }
+
+  if (cartStatus.status === StatusKeys.EMPTY) {
+    return <p>Your cart is empty.</p>;
+  }
   return (
     <table className="cart-table">
       <thead className="cart-header">
@@ -25,13 +30,8 @@ export const CartList: React.FC<ICartListProps> = ({
         </tr>
       </thead>
       <tbody className="cart-body">
-        {cartList.map((cart, index) => (
-          <CartItemComponent
-            productItem={cart}
-            key={cart.pet.id}
-            onChangeQuantity={onChangeQuantity}
-            onDelete={onDelete}
-          />
+        {cartItems.map((cart) => (
+          <CartItemComponent key={cart.pet.id} productItem={cart} />
         ))}
       </tbody>
     </table>

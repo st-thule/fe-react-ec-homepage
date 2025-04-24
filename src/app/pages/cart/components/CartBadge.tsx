@@ -1,18 +1,10 @@
 import { getDataFromLocalStorage, StorageKeys } from '@shared/utils/storage';
 import React, { useEffect, useState } from 'react';
 import cartIcon from '@assets/icons/cart-icon.svg';
+import { useCart } from '@shared/contexts/CartContext';
 
 const CartBadge: React.FC = () => {
-  const [totalQuantity, setTotalQuantity] = useState<number>(0);
-
-  useEffect(() => {
-    const cartListData = getDataFromLocalStorage(StorageKeys.PETS, []);
-    const total = cartListData.reduce(
-      (total, item) => total + item.quantity,
-      0
-    );
-    setTotalQuantity(total);
-  }, []);
+  const { totalQuantity } = useCart();
 
   return (
     <div className="cart-container">
