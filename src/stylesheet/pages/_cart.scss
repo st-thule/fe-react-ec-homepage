@@ -43,12 +43,30 @@
   }
 }
 .cart-summary {
-  width: 300px;
+  width: 28%;
   background-color: #fef4e8;
   padding: 20px;
   border-radius: 8px;
+  height: fit-content;
+}
+.cart-title {
+  padding-bottom: 20px;
+  color: $color-primary;
 }
 
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.cart-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
 .quantity-control {
   display: flex;
   align-items: center;
