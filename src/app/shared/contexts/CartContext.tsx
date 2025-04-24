@@ -26,6 +26,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  console.log('Cart Provided');
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [cartStatus, setCartStatus] = useState<CartStatus>({
     status: StatusKeys.LOADING,

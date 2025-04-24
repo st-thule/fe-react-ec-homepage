@@ -7,6 +7,7 @@ import { Adoption } from '@app/pages/home/container/Adoption';
 import { PetsSection } from '@app/pages/home/container/PetsSection';
 import { ProductSection } from '@app/pages/home/container/ProductsSection';
 import { KnowledgeSection } from './container/KnowledgeSection';
+import { CartProvider } from '@shared/contexts/CartContext';
 
 export const Home = () => {
   return (

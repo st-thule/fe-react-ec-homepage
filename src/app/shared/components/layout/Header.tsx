@@ -8,6 +8,7 @@ import dropdown from '@assets/icons/dropdown.svg';
 import searchResponsive from '@assets/icons/search-responsive.svg';
 import toogle from '@assets/icons/toogle.svg';
 import CartBadge from '@app/pages/cart/components/CartBadge';
+import { CartProvider } from '@shared/contexts/CartContext';
 
 export const Header = () => {
   return (
@@ -53,7 +54,10 @@ export const Header = () => {
               className="btn-primary btn-bold btn-xl"
               type="button"
             />
-            <CartBadge />
+            <CartProvider>
+              <CartBadge />
+            </CartProvider>
+
             <div className="utitlity-currency">
               <img className="currency-flag" src="/assets/images/flag.png" />
               <span className="currency-text">VND</span>

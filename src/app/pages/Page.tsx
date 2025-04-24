@@ -10,10 +10,10 @@ export const Page = () => {
     <>
       <CartProvider>
         <Header />
-        <main className="main">
-          <Outlet />
-        </main>
       </CartProvider>
+      <main className="main">
+        <Outlet />
+      </main>
       <Footer />
     </>
   );

@@ -8,12 +8,8 @@ export const Cart = () => {
     <section className="section-cart">
       <div className="container">
         <div className="wrapper">
-          <>
-            <CartProvider>
-              <CartList />
-              <CartSummary />
-            </CartProvider>
-          </>
+          <CartList />
+          <CartSummary />
         </div>
       </div>
     </section>
