@@ -10,10 +10,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .cart-table {
+  width: 70%;
   border-collapse: collapse;
   margin-bottom: 1px;
 }

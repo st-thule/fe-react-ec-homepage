@@ -5,12 +5,14 @@ import { Product } from '@shared/models/Product';
 import { Pet } from '@shared/models/Pet';
 import { CardTypeKey } from '@shared/utils/storage';
 import { Blog } from '@shared/models/Blog';
+import { Link } from 'react-router-dom';
 
 interface CardProps {
   data: Pet | Product | Blog;
   cardType: CardTypeKey;
   className: string;
   onSubmit: (id: number | string) => void;
+  onClick: (id: string) => void;
 }
 
 export const CardItem: React.FC<CardProps> = ({
@@ -18,10 +20,15 @@ export const CardItem: React.FC<CardProps> = ({
   cardType,
   className,
   onSubmit,
+  onClick,
 }) => {
   return (
     <li className={`list-item ${className}`}>
-      <a className="card" href="#">
+      <Link
+        to={`/pets/${data.id}`}
+        className="card"
+        onClick={() => onClick(data.id.toString())}
+      >
         <div className="card-img">
           <img src={data.image} alt={data.id.toString()} />
         </div>
@@ -49,7 +56,11 @@ export const CardItem: React.FC<CardProps> = ({
               <Button
                 className="btn-add-cart"
                 label="Add to cart"
-                onClick={() => onSubmit(data.id)}
+                onClick={(event) => {
+                  event.preventDefault(); // Ngừng hành động mặc định (tránh reload)
+                  event.stopPropagation(); // Ngừng lan truyền sự kiện
+                  onSubmit(data.id); // Thêm vào giỏ hàng
+                }}
               />
             </>
           ) : cardType === 'products' ? (
@@ -83,7 +94,7 @@ export const CardItem: React.FC<CardProps> = ({
             </>
           )}
         </div>
-      </a>
+      </Link>
     </li>
   );
 };

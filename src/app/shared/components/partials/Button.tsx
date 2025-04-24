@@ -3,7 +3,7 @@ import React from 'react';
 interface ButtonProps {
   className?: string;
   type?: 'button' | 'submit';
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   label?: string | '';
   icon?: string;
 }

@@ -9,7 +9,6 @@ import {
   StorageKeys,
 } from '@shared/utils/storage';
 import Button from '@shared/components/partials/Button';
-import { PetsList } from '@shared/constants/data';
 import { CardList } from '@shared/components/partials/Card/CardList';
 import { CartItem } from '@shared/models/CartItem';
 
@@ -61,6 +60,8 @@ export const PetsSection = () => {
     }
   };
 
+  const handleClickDetailPage = (id: string) => {};
+
   return (
     <section className="section section-products section-pets">
       <div className="container">
@@ -83,6 +84,7 @@ export const PetsSection = () => {
             type={CardTypeKey.PET}
             className="col-6 col-sm-6 col-md-3"
             onSubmit={handleAddToCart}
+            onClick={handleClickDetailPage}
           />
         </div>
       </div>

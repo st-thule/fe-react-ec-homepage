@@ -11,12 +11,14 @@ export interface ICardList {
   type: CardTypeKey;
   className: string;
   onSubmit: (id: number | string) => void;
+  onClick: (id: string) => void;
 }
 export const CardList: React.FC<ICardList> = ({
   data,
   type,
   className,
   onSubmit,
+  onClick,
 }) => {
   return (
     <ul className="list-products row">
@@ -27,6 +29,7 @@ export const CardList: React.FC<ICardList> = ({
           cardType={type}
           className={className}
           onSubmit={onSubmit}
+          onClick={onClick}
         />
       ))}
     </ul>
