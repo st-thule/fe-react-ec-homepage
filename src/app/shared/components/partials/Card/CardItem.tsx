@@ -23,6 +23,7 @@ export const CardItem: React.FC<CardProps> = ({
         <div className="card-img">
           <img src={data.image} alt={data.id.toString()} />
         </div>
+
         <div className="card-content">
           <h3 className="card-title">
             {cardType === 'pets'
@@ -31,38 +32,47 @@ export const CardItem: React.FC<CardProps> = ({
           </h3>
 
           <p className="card-detail detail">
-            {cardType === 'pets' ? (
-              <span className="detail-group">
-                <span className="detail-label">Gene:</span>
-                <span className="detail-value">{(data as Pet).gender}</span>
-              </span>
-            ) : (
-              <span className="detail-group">
-                <span className="detail-label">Product:</span>
-                <span className="detail-value">{(data as Product).type}</span>
-              </span>
+            {cardType === 'pets' && (
+              <>
+                <span className="detail-group">
+                  <span className="detail-label">Gene:</span>
+                  <span className="detail-value">{(data as Pet).gender}</span>
+                </span>
+                <img className="detail-dot" src="assets/icons/dot.svg" />
+                <span className="detail-group">
+                  <span className="detail-label">Age:</span>
+                  <span className="detail-value">
+                    {(data as Pet).age} months
+                  </span>
+                </span>
+              </>
             )}
-            <img className="detail-dot" src="assets/icons/dot.svg" />
 
-            {cardType === 'pets' ? (
-              <span className="detail-group">
-                <span className="detail-label">Age:</span>
-                <span className="detail-value">{(data as Pet).age} months</span>
-              </span>
-            ) : (
-              <span className="detail-group">
-                <span className="detail-label">Size:</span>
-                <span className="detail-value">{(data as Product).size}</span>
-              </span>
+            {cardType === 'products' && (
+              <>
+                <span className="detail-group">
+                  <span className="detail-label">Product:</span>
+                  <span className="detail-value">{(data as Product).type}</span>
+                </span>
+                <img className="detail-dot" src="assets/icons/dot.svg" />
+                <span className="detail-group">
+                  <span className="detail-label">Size:</span>
+                  <span className="detail-value">{(data as Product).size}</span>
+                </span>
+              </>
             )}
           </p>
 
-          {cardType === 'pets' ? (
+          {/* Price and Button for pets */}
+          {cardType === 'pets' && (
             <>
               <span className="card-price">{(data as Pet).price} VND</span>
               <Button className="btn-add-cart" label="Add to cart" />
             </>
-          ) : (
+          )}
+
+          {/* Price and special offer for products */}
+          {cardType === 'products' && (
             <>
               <span className="card-price">{(data as Product).price} VND</span>
               <div className="card-action">
@@ -76,6 +86,8 @@ export const CardItem: React.FC<CardProps> = ({
               </div>
             </>
           )}
+
+          {/* Blog details */}
           {cardType === 'blogs' && (
             <>
               <div className="card-tag">
