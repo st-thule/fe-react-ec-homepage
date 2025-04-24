@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import Button from "@shared/components/partials/Button";
+import Button from '@shared/components/partials/Button';
 
-import arrow from "@assets/icons/arrow.svg";
-import { sellerItem } from "@shared/constants/data";
+import arrow from '@assets/icons/arrow.svg';
+import { sellerItem } from '@shared/constants/data';
 
 export const Sellers = () => {
   return (
@@ -21,7 +21,7 @@ export const Sellers = () => {
               <Button
                 className="btn-secondary btn-flex btn-sm btn-font-small"
                 label="View all our sellers"
-                icon={arrow}
+                iconSuffix={arrow}
               />
             </div>
           </div>

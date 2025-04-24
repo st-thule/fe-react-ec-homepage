@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Button from "@shared/components/partials/Button";
+import Button from '@shared/components/partials/Button';
 
-import arrow from "@assets/icons/arrow.svg";
+import arrow from '@assets/icons/arrow.svg';
 
 export const FriendBanner = () => {
   return (
@@ -24,7 +24,7 @@ export const FriendBanner = () => {
               <Button
                 className="btn-secondary btn-flex"
                 label="View Intro"
-                icon={arrow}
+                iconSuffix={arrow}
               />
               <Button className="btn-primary btn-2xl" label="Explore Now" />
             </div>

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Button from "@shared/components/partials/Button";
+import Button from '@shared/components/partials/Button';
 
-import iconBtn from "@assets/icons/icon-btn.svg";
+import iconBtn from '@assets/icons/icon-btn.svg';
 
 export const HeroBanner = () => {
   return (
@@ -31,7 +31,7 @@ export const HeroBanner = () => {
               <Button
                 className="btn-secondary btn-flex"
                 label="View Intro"
-                icon={iconBtn}
+                iconSuffix={iconBtn}
               />
               <Button className="btn-primary btn-2xl" label="Explore Now" />
             </div>
