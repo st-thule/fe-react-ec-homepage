@@ -10,8 +10,8 @@ export interface ICardList {
   data: Pet[] | Product[] | Blog[];
   type: CardTypeKey;
   className: string;
-  onSubmit: (id: number | string) => void;
-  onClick: (id: string) => void;
+  onSubmit?: (id: number | string) => void;
+  onClick?: (id: string) => void;
 }
 export const CardList: React.FC<ICardList> = ({
   data,

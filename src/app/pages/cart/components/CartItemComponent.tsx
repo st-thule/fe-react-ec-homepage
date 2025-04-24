@@ -1,8 +1,9 @@
+import React, { useRef } from 'react';
+
 import deleteIcon from '@assets/icons/delete.svg';
 import Button from '@shared/components/partials/Button';
 import { Input } from '@shared/components/partials/Input';
 import { CartItem } from '@shared/models/CartItem';
-import React, { useRef } from 'react';
 
 interface ICartItemProps {
   productItem: CartItem;

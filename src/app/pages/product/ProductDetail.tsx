@@ -1,7 +1,8 @@
-import Button from '@shared/components/partials/Button';
-import { Pet } from '@shared/models/Pet';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
+import Button from '@shared/components/partials/Button';
+import { Pet } from '@shared/models/Pet';
 
 export const ProductDetail = () => {
   const { id } = useParams();

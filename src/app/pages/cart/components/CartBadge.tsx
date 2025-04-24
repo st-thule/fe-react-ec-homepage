@@ -1,5 +1,6 @@
-import { getDataFromLocalStorage, StorageKeys } from '@shared/utils/storage';
 import React, { useEffect, useState } from 'react';
+
+import { getDataFromLocalStorage, StorageKeys } from '@shared/utils/storage';
 import cartIcon from '@assets/icons/cart-icon.svg';
 
 const CartBadge: React.FC = () => {

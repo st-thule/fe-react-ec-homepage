@@ -31,12 +31,7 @@ export const ProductSection = () => {
           </div>
         </div>
         <div className="section-body">
-          <CardList
-            data={products}
-            type={CardTypeKey.PRODUCT}
-            className="col-6 col-sm-6 col-md-3" onSubmit={function (id: number | string): void {
-              throw new Error('Function not implemented.');
-            } }          />
+          <CardList data={products} type={CardTypeKey.PRODUCT} className={''} />
         </div>
       </div>
     </section>

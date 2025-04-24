@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { CartItem } from '@shared/models/CartItem';
 import { CartItemComponent } from './CartItemComponent';
 

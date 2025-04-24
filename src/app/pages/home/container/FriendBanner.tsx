@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Button from "@shared/components/partials/Button";
-
-import arrow from "@assets/icons/arrow.svg";
+import Button from '@shared/components/partials/Button';
+import arrow from '@assets/icons/arrow.svg';
 
 export const FriendBanner = () => {
   return (

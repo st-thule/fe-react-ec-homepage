@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Button from "@shared/components/partials/Button";
-
-import arrow from "@assets/icons/arrow.svg";
-import { sellerItem } from "@shared/constants/data";
+import Button from '@shared/components/partials/Button';
+import arrow from '@assets/icons/arrow.svg';
+import { sellerItem } from '@shared/constants/data';
 
 export const Sellers = () => {
   return (
