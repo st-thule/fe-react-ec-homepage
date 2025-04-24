@@ -6,6 +6,7 @@ import {
   StatusKeys,
 } from '@shared/utils/storage';
 import { CartItem } from '@shared/models/CartItem';
+import { Pet } from '@shared/models/Pet';
 
 interface CartStatus {
   status: StatusKeys;
@@ -19,6 +20,7 @@ interface CartContextType {
   deleteItem: (id: string) => void;
   totalQuantity: number;
   totalPrice: number;
+  addToCart: (pet: Pet) => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -57,6 +59,33 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
     }
   }, []);
 
+  const addToCart = (pet: Pet) => {
+    const existingItem = cartItems.find((item) => item.pet.id === pet.id);
+
+    if (existingItem) {
+      const updatedItems = cartItems.map((item) =>
+        item.pet.id === pet.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCartItems(updatedItems);
+      setDataFromLocalStorage(StorageKeys.PETS, updatedItems);
+    } else {
+      const newItem: CartItem = {
+        pet,
+        quantity: 1,
+      };
+      const updatedItems = [...cartItems, newItem];
+      setCartItems(updatedItems);
+      setDataFromLocalStorage(StorageKeys.PETS, updatedItems);
+    }
+
+    if (cartStatus.status === StatusKeys.EMPTY) {
+      setCartStatus({
+        status: StatusKeys.SUCCESS,
+        message: 'Cart updated successfully.',
+      });
+    }
+  };
+
   const updateQuantity = (id: string, quantity: number) => {
     const updatedItems = cartItems.map((item) =>
       item.pet.id === id ? { ...item, quantity } : item
@@ -87,6 +116,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
         deleteItem,
         totalQuantity,
         totalPrice,
+        addToCart,
       }}
     >
       {children}

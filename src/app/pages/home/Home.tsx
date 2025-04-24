@@ -13,12 +13,18 @@ export const Home = () => {
   return (
     <>
       <HeroBanner />
-      <PetsSection />
+      <CartProvider>
+        <PetsSection />
+      </CartProvider>
       <FriendBanner />
-      <ProductSection />
+      <CartProvider>
+        <ProductSection />
+      </CartProvider>
       <Adoption />
       <Sellers />
-      <KnowledgeSection />
+      <CartProvider>
+        <KnowledgeSection />
+      </CartProvider>
     </>
   );
 };

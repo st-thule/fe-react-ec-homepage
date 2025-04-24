@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Button from '@shared/components/partials/Button';
 import { Product } from '@shared/models/Product';
@@ -6,12 +6,12 @@ import { Pet } from '@shared/models/Pet';
 import { CardTypeKey } from '@shared/utils/storage';
 import { Blog } from '@shared/models/Blog';
 import { Link } from 'react-router-dom';
+import { useCart } from '@shared/contexts/CartContext';
 
 interface CardProps {
   data: Pet | Product | Blog;
   cardType: CardTypeKey;
   className: string;
-  onSubmit: (id: number | string) => void;
   onClick: (id: string) => void;
 }
 
@@ -19,9 +19,9 @@ export const CardItem: React.FC<CardProps> = ({
   data,
   cardType,
   className,
-  onSubmit,
   onClick,
 }) => {
+  const { addToCart } = useCart();
   return (
     <li className={`list-item ${className}`}>
       <Link
@@ -57,9 +57,9 @@ export const CardItem: React.FC<CardProps> = ({
                 className="btn-add-cart"
                 label="Add to cart"
                 onClick={(event) => {
-                  event.preventDefault(); // Ngừng hành động mặc định (tránh reload)
-                  event.stopPropagation(); // Ngừng lan truyền sự kiện
-                  onSubmit(data.id); // Thêm vào giỏ hàng
+                  event.preventDefault();
+                  event.stopPropagation();
+                  addToCart(data as Pet);
                 }}
               />
             </>

@@ -17,7 +17,6 @@ export const CardList: React.FC<ICardList> = ({
   data,
   type,
   className,
-  onSubmit,
   onClick,
 }) => {
   return (
@@ -28,7 +27,6 @@ export const CardList: React.FC<ICardList> = ({
           data={item}
           cardType={type}
           className={className}
-          onSubmit={onSubmit}
           onClick={onClick}
         />
       ))}
