@@ -8,6 +8,7 @@ import dropdown from '@assets/icons/dropdown.svg';
 import searchResponsive from '@assets/icons/search-responsive.svg';
 import toogle from '@assets/icons/toogle.svg';
 import CartBadge from '@app/pages/cart/components/CartBadge';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -53,7 +54,10 @@ export const Header = () => {
               className="btn-primary btn-bold btn-xl"
               type="button"
             />
-            <CartBadge />
+            <Link to="/cart">
+              <CartBadge />
+            </Link>
+
             <div className="utitlity-currency">
               <img className="currency-flag" src="/assets/images/flag.png" />
               <span className="currency-text">VND</span>

@@ -11,7 +11,7 @@ export const NavItems: NavItemProps[] = [
   {
     id: 1,
     title: 'Home',
-    href: '/home',
+    href: '/',
   },
   {
     id: 2,

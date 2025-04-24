@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { NavItems } from "@shared/constants/data";
+import { NavItems } from '@shared/constants/data';
+import { Link } from 'react-router-dom';
 
 interface NavBarProps {
   ulClassName?: string;
@@ -9,12 +10,12 @@ interface NavBarProps {
 export const NavBar: React.FC<NavBarProps> = ({ ulClassName }) => {
   return (
     <nav className="nav">
-      <ul className={`list-menu ${ulClassName ?? ""}`}>
+      <ul className={`list-menu ${ulClassName ?? ''}`}>
         {NavItems.map((item) => (
           <li className="list-item menu-item" key={item.id}>
-            <a className="item-link" href={item.href}>
+            <Link className="item-link" to={item.href}>
               {item.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
