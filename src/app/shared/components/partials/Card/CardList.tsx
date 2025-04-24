@@ -22,6 +22,7 @@ export const CardList: React.FC<ICardList> = ({
     <ul className="list-products row">
       {data.map((item) => (
         <CardItem
+          key={item.id}
           data={item}
           cardType={type}
           className={className}

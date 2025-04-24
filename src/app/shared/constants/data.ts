@@ -256,7 +256,7 @@ export const sellerItem = [
     image: 'assets/images/sellers/butchers.png',
   },
   {
-    id: 1,
+    id: 7,
     alt: 'Pedigree',
     image: 'assets/images/sellers/pedigree.png',
   },

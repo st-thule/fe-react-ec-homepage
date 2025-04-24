@@ -20,7 +20,7 @@ export const CardItem: React.FC<CardProps> = ({
   onSubmit,
 }) => {
   return (
-    <li className={`list-item ${className}`} key={data.id}>
+    <li className={`list-item ${className}`}>
       <a className="card" href="#">
         <div className="card-img">
           <img src={data.image} alt={data.id.toString()} />

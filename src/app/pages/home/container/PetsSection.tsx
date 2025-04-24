@@ -11,23 +11,53 @@ import {
 import Button from '@shared/components/partials/Button';
 import { PetsList } from '@shared/constants/data';
 import { CardList } from '@shared/components/partials/Card/CardList';
+import { CartItem } from '@shared/models/CartItem';
 
 export const PetsSection = () => {
   const [pets, setPets] = useState<Pet[]>([]);
 
   useEffect(() => {
-    setPets(PetsList);
+    const fetchPets = async () => {
+      try {
+        const response = await fetch('/data/product.json');
+        if (!response.ok) throw new Error('Fail to fetch');
+        const data: Pet[] = await response.json();
+        setPets(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchPets();
   }, []);
 
   const handleAddToCart = (id: string | number) => {
     const selectedItem = pets.find((pet) => pet.id === id);
 
-    const currentCartData = getDataFromLocalStorage(StorageKeys.PETS, []);
-    const existData = currentCartData.find((pet) => pet.id === id);
+    if (!selectedItem) return;
+
+    const currentCartData: CartItem[] = getDataFromLocalStorage(
+      StorageKeys.PETS,
+      []
+    );
+    const existData = currentCartData.find(
+      (cartItem) => cartItem.pet.id === id
+    );
+
     if (!existData) {
-      const updatedCart = [...currentCartData, selectedItem];
+      const newCartItem: CartItem = {
+        pet: selectedItem,
+        quantity: 1,
+      };
+      const updatedCart = [...currentCartData, newCartItem];
       setDataFromLocalStorage(StorageKeys.PETS, updatedCart);
     } else {
+      const updatedCart = currentCartData.map((cartItem) =>
+        cartItem.pet.id === id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem
+      );
+      setDataFromLocalStorage(StorageKeys.PETS, updatedCart);
     }
   };
 

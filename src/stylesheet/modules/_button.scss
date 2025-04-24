@@ -48,5 +48,13 @@
       padding-left: 8px;
     }
   }
-  
+
+  &-icon {
+    border: none;
+    background-color: transparent;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

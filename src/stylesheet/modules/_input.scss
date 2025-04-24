@@ -1,4 +1,4 @@
-@use "../base/" as *;
+@use '../base/' as *;
 input {
   border: none;
   font-size: $size-small;
@@ -15,4 +15,13 @@ input {
     width: 100%;
     flex: auto;
   }
+}
+
+.input-square {
+  width: 20%;
+  height: auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from 'react';
 
 interface InputProps {
   name?: string;
@@ -12,47 +12,59 @@ interface InputProps {
   isReadOnly?: boolean;
   isDisabled?: boolean;
   type?: string;
+  value?: string | number;
 }
-export const Input: React.FC<InputProps> = ({
-  name = "",
-  label = "",
-  className = "",
-  type = "text",
-  placeHolder = "",
-  maxLength,
-  minLength,
-  isReadOnly = false,
-  isDisabled = false,
-  onInputBlur,
-  onInputChange,
-}) => {
-  const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
-    if (onInputBlur) {
-      onInputBlur(event.target.value);
-    }
-  };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (onInputChange) {
-      onInputChange(event.target.value);
-    }
-  };
-  return (
-    <div className="input-wrapper">
-      {label && <label>{label}</label>}
-      <input
-        id={name}
-        name={name}
-        type={type}
-        className={className}
-        placeholder={placeHolder}
-        maxLength={maxLength}
-        minLength={minLength}
-        readOnly={isReadOnly}
-        disabled={isDisabled}
-        onBlur={handleBlur}
-        onChange={handleChange}
-      />
-    </div>
-  );
-};
+// Sử dụng forwardRef để lấy được ref từ bên ngoài truyền vào
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  (
+    {
+      name = '',
+      label = '',
+      className = '',
+      type = 'text',
+      placeHolder = '',
+      maxLength,
+      minLength,
+      isReadOnly = false,
+      isDisabled = false,
+      onInputBlur,
+      onInputChange,
+      value,
+    },
+    ref
+  ) => {
+    const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+      if (onInputBlur) {
+        onInputBlur(event.target.value);
+      }
+    };
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      if (onInputChange) {
+        onInputChange(event.target.value);
+      }
+    };
+
+    return (
+      <div className="input-wrapper">
+        {label && <label>{label}</label>}
+        <input
+          ref={ref}
+          id={name}
+          name={name}
+          type={type}
+          value={value}
+          className={className}
+          placeholder={placeHolder}
+          maxLength={maxLength}
+          minLength={minLength}
+          readOnly={isReadOnly}
+          disabled={isDisabled}
+          onBlur={handleBlur}
+          onChange={handleChange}
+        />
+      </div>
+    );
+  }
+);

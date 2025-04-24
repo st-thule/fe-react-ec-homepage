@@ -1,0 +1,78 @@
+@use '../base/' as *;
+
+.section-cart {
+  padding: 100px 0;
+}
+
+.section-cart .wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+.cart-table {
+  border-collapse: collapse;
+  margin-bottom: 1px;
+}
+
+.cart-header th {
+  background-color: #fef4e8;
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-body td {
+  padding: 16px;
+  vertical-align: middle;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-img {
+  width: 10%;
+  height: auto;
+  border-radius: 8px;
+  img {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+.cart-summary {
+  width: 300px;
+  background-color: #fef4e8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .btn-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+}
+.quantity-control {
+  .input-wrapper {
+    flex: none;
+    width: 11%;
+  }
+  .input-square {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0;
+  }
+}

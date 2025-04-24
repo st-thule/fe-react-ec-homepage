@@ -4,7 +4,7 @@ interface ButtonProps {
   className?: string;
   type?: 'button' | 'submit';
   onClick?: () => void;
-  label: string;
+  label?: string | '';
   icon?: string;
 }
 
@@ -16,14 +16,14 @@ const Button: React.FC<ButtonProps> = ({
   icon,
 }) => {
   return (
-    <a className={`btn ${className}`} onClick={onClick}>
+    <button className={`btn ${className}`} onClick={onClick}>
       <p>{label}</p>
       {icon && (
         <span className="btn-icon">
           <img src={icon} alt="button icon" />
         </span>
       )}
-    </a>
+    </button>
   );
 };
 

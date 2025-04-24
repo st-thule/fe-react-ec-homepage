@@ -1,6 +1,6 @@
 import { Pet } from './Pet';
 
 export interface CartItem {
-  pets: Pet[];
+  pet: Pet;
   quantity: number | 1;
 }
