@@ -8,6 +8,13 @@ export enum StorageKeys {
   PETS = 'pets',
 }
 
+export enum StatusKeys {
+  LOADING = 'loading',
+  ERROR = 'error',
+  EMPTY = 'empty',
+  SUCCESS = 'success',
+}
+
 export const getDataFromLocalStorage = <T>(
   key: StorageKeys,
   defaultValue: T
