@@ -1,0 +1,177 @@
+@use "../base/" as *;
+.footer {
+  background-color: $color-light-orange;
+  padding: 80px 0 40px 0;
+
+  .nav {
+    padding: auto;
+  }
+
+  &-register {
+    @include flex(
+      $direction: row,
+      $wrap: wrap,
+      $align: center,
+      $justify: space-between
+    );
+    width: 100%;
+    padding: 32px;
+    background-color: $color-secondary;
+    border-radius: 16px;
+    @media screen and (max-width: $md) {
+      padding: 16px;
+    }
+  }
+  &-link {
+    width: 100%;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $color-lightest-grey;
+    @include flex(
+      $direction: row,
+      $wrap: wrap,
+      $align: center,
+      $justify: space-between
+    );
+    @media screen and (max-width: $md) {
+      @include flex($justify: center, $gap: 20px);
+      margin-bottom: 36px;
+    }
+  }
+  &-info {
+    @include flex($align: center, $justify: space-between);
+    @media screen and (max-width: $md) {
+      @include flex($direction: column);
+    }
+  }
+  &-legal {
+    order: 3;
+    @include flex($justify: flex-end);
+    @media screen and (max-width: $md) {
+      order: 2;
+      margin-bottom: 8px;
+      @include flex($justify: center);
+    }
+    .list {
+      &-legal {
+        @include flex($justify: space-between);
+      }
+      &-item {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+      }
+    }
+  }
+  &-logo {
+    order: 2;
+    @include flex($justify: center, $align: center);
+    @media screen and (max-width: $md) {
+      order: 1;
+      margin-bottom: 32px;
+    }
+  }
+  &-copyright {
+    order: 1;
+    font-size: $size-small;
+    line-height: 20px;
+    font-weight: $font-normal;
+    color: $color-a-grey;
+    @media screen and (max-width: $md) {
+      order: 3;
+      font-size: $size-xs;
+      line-height: 16px;
+    }
+  }
+  .list {
+    &-legal {
+      @include flex($gap: 60px);
+      @media screen and (max-width: $md) {
+        @include flex($gap: 12px);
+      }
+    }
+    &-item {
+      a {
+        font-weight: $font-medium;
+        color: $color-a-grey;
+        font-size: $size-small;
+        line-height: 20px;
+        @media screen and (max-width: $md) {
+          font-size: $size-tiny;
+          line-height: 18px;
+        }
+      }
+    }
+    &-social {
+      @include flex($direction: row, $align: center, $gap: 40px);
+    }
+  }
+
+  &-social {
+    .list {
+      &-item {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0 0;
+      }
+    }
+  }
+  &-nav {
+    .list {
+      &-item {
+        a {
+          font-size: $size-medium;
+          line-height: 24px;
+          color: $color-light-black;
+        }
+      }
+    }
+  }
+}
+
+.register {
+  &-title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $color-a-white;
+    text-transform: capitalize;
+    @media screen and (max-width: $md) {
+      font-size: $size-regular;
+      line-height: 32px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+  }
+  &-form {
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 14px;
+    background-color: $color-a-white;
+    @include flex(
+      $direction: row,
+      $wrap: wrap,
+      $align: center,
+      $justify: space-between,
+      $gap: 12px
+    );
+    input {
+      border-radius: 8px;
+      padding: 14px 28px;
+      border: 1px solid $color-lightest-grey;
+      width: 100%;
+      flex: 1;
+    }
+    @media screen and (max-width: $md) {
+      @include flex($gap: 12px);
+      input {
+        max-width: inherit;
+      }
+      .btn {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}

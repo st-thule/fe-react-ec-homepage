@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Header } from '@shared/components/layout/Header';
-import { Home } from '@app/pages/home/Home';
 import { Outlet } from 'react-router-dom';
+import { Footer } from '@shared/components/layout/Footer';
 
 export const Page = () => {
   return (
@@ -11,6 +11,7 @@ export const Page = () => {
       <main className="main">
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 };

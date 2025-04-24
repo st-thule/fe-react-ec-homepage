@@ -8,3 +8,11 @@ input {
   background-color: $color-a-white;
   width: 100%;
 }
+
+.input-wrapper {
+  flex: 1;
+  @media screen and (max-width: $md) {
+    width: 100%;
+    flex: auto;
+  }
+}

@@ -1,0 +1,6 @@
+@use "../base/" as *;
+
+//Wrapper
+.wrapper {
+  @include flex($direction: column);
+}
