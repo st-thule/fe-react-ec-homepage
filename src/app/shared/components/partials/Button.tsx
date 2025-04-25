@@ -1,29 +1,36 @@
-import React from "react";
+import React from 'react';
 
 interface ButtonProps {
   className?: string;
-  type?: "button" | "submit";
+  type?: 'button' | 'submit';
   onClick?: () => void;
   label: string;
-  icon?: string;
+  iconPrefix?: string;
+  iconSuffix?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  className = "",
-  type = "button",
+  className = '',
+  type = 'button',
   onClick,
   label,
-  icon,
+  iconPrefix,
+  iconSuffix,
 }) => {
   return (
-    <a className={`btn ${className}`} onClick={onClick}>
-      {icon && (
-        <span className="btn-icon">
-          <img src={icon} alt="button icon" />
+    <button type={type} className={`btn ${className}`} onClick={onClick}>
+      {iconPrefix && (
+        <span className="btn-icon prefix">
+          <img src={iconPrefix} alt="prefix icon" />
         </span>
       )}
       <p>{label}</p>
-    </a>
+      {iconSuffix && (
+        <span className="btn-icon suffix">
+          <img src={iconSuffix} alt="suffix icon" />
+        </span>
+      )}
+    </button>
   );
 };
 
